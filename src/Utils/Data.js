@@ -6,7 +6,7 @@ const directoryData = {
         name: "public",
         isFolder: true,
         content: [
-          { name: "index.html", isFolder: false },
+          { name: "index.html", isFolder: false},
           { name: "favicon.ico", isFolder: false },
           { name: "manifest.json", isFolder: false },
         ],
@@ -25,13 +25,15 @@ const directoryData = {
               },
             ],
           },
-          { name: "components", isFolder: true, content: [] },
-          { name: "App.jsx", isFolder: false },
+          { name: "components", isFolder: true, content: [
+            { name: "App.jsx", isFolder: false},
           { name: "App.css", isFolder: false },
-          { name: "index.js", isFolder: false },
+          { name: "index.js", isFolder: false},
+          ] },
+          
         ],
       },
-      { name: "package.json", isFolder: false },
+      { name: "package.json", isFolder: false},
     ],
   };
   

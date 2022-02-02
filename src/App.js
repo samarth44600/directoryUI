@@ -1,13 +1,16 @@
-import "./App.css";
+import style from './App.module.scss'
 
 // IMPORTING COMPONENTS
-import Directory from "./Components/Directory";
+import Folder from "./Components/Folder";
+
+//IMPORTING DATA
+import directoryData from "./Utils/Data";
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
       <h1>Hello World</h1>
-      <Directory />
+      <Folder style={style} name={directoryData.name} content={directoryData.content} icon={directoryData.isFolder}/>
     </div>
   );
 }
