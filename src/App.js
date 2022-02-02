@@ -1,4 +1,4 @@
-import style from './App.module.scss'
+import styles from './App.module.scss'
 
 // IMPORTING COMPONENTS
 import Folder from "./Components/Folder";
@@ -8,9 +8,9 @@ import directoryData from "./Utils/Data";
 
 function App() {
   return (
-    <div className={style.App}>
-      <h1>Hello World</h1>
-      <Folder style={style} name={directoryData.name} content={directoryData.content} icon={directoryData.isFolder}/>
+    <div className={styles.App}>
+      <h1>Directory UI</h1>
+      <Folder name={directoryData.name} content={directoryData.content} icon={directoryData.isFolder}/>
     </div>
   );
 }

@@ -2,50 +2,51 @@ import React, { useState } from "react";
 
 //IMPORTING ICONS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFolder,
-  faFolderOpen,
-  faFile,
-} from "@fortawesome/free-solid-svg-icons";
+import { faFolder, faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 
 //IMPORTING FILE COMPONENT
 import File from "./File";
-export default function Folder({ name, content, icon, style }) {
+
+//IMPORTING STYLES
+import styles from "../Styles/folder.module.scss";
+export default function Folder({ name, content }) {
   const [isExpanded, setExpanded] = useState(false);
   const expand = () => {
     setExpanded(!isExpanded);
   };
   console.log(isExpanded);
   return (
-    <div>
-      <div onClick={expand}>
-        <FontAwesomeIcon icon={!isExpanded ? faFolder : faFolderOpen} />
+    <div className={styles.mainDiv}>
+      <div className={styles.rootDiv} onClick={expand}>
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={!isExpanded ? faFolder : faFolderOpen}
+        />
         {name} <span>({content.length})</span>
       </div>
-      {/* eslint-disable-next-line array-callback-return */}
-      {content.map((children, index) => {
-        switch (children.isFolder) {
-          case true:
-            return (
-              <div>
-                <Folder
-                  name={children.name}
-                  content={children.content}
-                  icon={children.isFolder}
-                  key={index}
-                />
-              </div>
-            );
-          case false:
-            return (
-              <div>
-                <File key={index} name={children.name} />
-              </div>
-            );
-          default:
-            console.log("Error");
-        }
-      })}
+      <div className={styles.folderContent}>
+        {isExpanded &&
+          content &&
+          content.map((children, index) => {
+            switch (children.isFolder) {
+              case true:
+                return (
+                  <Folder
+                    name={children.name}
+                    content={children.content}
+                    icon={children.isFolder}
+                    key={index}
+                  />
+                );
+              case false:
+                return (
+                  <File styles={styles} key={index} name={children.name} />
+                );
+              default:
+                console.log("Error");
+            }
+          })}
+      </div>
     </div>
   );
 }

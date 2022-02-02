@@ -1,0 +1,21 @@
+.mainDiv {
+  .rootDiv {
+    color: #000;
+    cursor: pointer;
+    margin: 5px 0;
+    > span {
+      color: #6f6f6f;
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.folderContent {
+  padding-left: 5px;
+  margin-left: 10px;
+  border-left: 1px solid black;
+}
+.icon {
+  color: rgb(63, 63, 63);
+}

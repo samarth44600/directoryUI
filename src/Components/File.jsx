@@ -4,10 +4,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 
-export default function File({ name }) {
+export default function File({ name, styles }) {
   return (
     <div>
-      <FontAwesomeIcon icon={faFile} />
+      <FontAwesomeIcon className={styles.icon} icon={faFile} />
       {name}
     </div>
   );

@@ -27,8 +27,8 @@ const directoryData = {
           },
           { name: "components", isFolder: true, content: [
             { name: "App.jsx", isFolder: false},
-          { name: "App.css", isFolder: false },
-          { name: "index.js", isFolder: false},
+            { name: "index.js", isFolder: false},
+            { name: "App.css", isFolder: false },
           ] },
           
         ],
