@@ -16,6 +16,13 @@
   margin-left: 10px;
   border-left: 1px solid black;
 }
-.icon {
+.folderIcon {
   color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+.fileDiv {
+  cursor: pointer;
+  .fileIcon {
+    color: rgb(144, 202, 249);
+  }
 }

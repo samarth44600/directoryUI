@@ -19,7 +19,7 @@ export default function Folder({ name, content }) {
     <div className={styles.mainDiv}>
       <div className={styles.rootDiv} onClick={expand}>
         <FontAwesomeIcon
-          className={styles.icon}
+          className={styles.folderIcon}
           icon={!isExpanded ? faFolder : faFolderOpen}
         />
         {name} <span>({content.length})</span>

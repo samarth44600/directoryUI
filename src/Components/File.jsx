@@ -6,8 +6,8 @@ import { faFile } from "@fortawesome/free-solid-svg-icons";
 
 export default function File({ name, styles }) {
   return (
-    <div>
-      <FontAwesomeIcon className={styles.icon} icon={faFile} />
+    <div className={styles.fileDiv}>
+      <FontAwesomeIcon className={styles.fileIcon} icon={faFile} />
       {name}
     </div>
   );
